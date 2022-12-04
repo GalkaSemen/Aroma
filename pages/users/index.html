@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+   
+    <div class="container mt-5">
+    <div class="row">
+        <div class="col-3">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+           
+            <a class="nav-link" id="profileTab" data-toggle="pill" href="#v-pills-profile" role="tab" 
+            aria-controls="v-pills-profile" aria-selected="false">Профиль</a>
+            <a class="nav-link" id="messagesTab" data-toggle="pill" href="#v-pills-messages" role="tab" 
+            aria-controls="v-pills-messages" aria-selected="false">Сообщения</a>
+            <a class="nav-link" id="settingsTab" data-toggle="pill" href="#v-pills-settings" role="tab" 
+            aria-controls="v-pills-settings" aria-selected="false">Настройки</a>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="tab-content" id="v-pills-tabContent">
+           
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+                <div class="row">
+                    <div class="col-md-3"><img src="https://www.seekpng.com/png/full/356-3562377_personal-user.png" alt="" width= "100%"> </div>
+                    <div class="col-md-9">
+                        <h1 id="userName"></h1>
+                        <h2>О себе</h2>
+                        <p> Email: <span id="userMail"></span> </p>
+                        <p> Id: <span id="eserId"></span> </p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Tenetur, perferendis ducimus eum atque, ut, reiciendis quia dolorem labore aut nesciunt non voluptatibus sequi hic nobis voluptas. 
+                            Dolore sint unde modi.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+
+             <div class="row">
+                <div class="col-md-5">
+                 <div class="row border align-items-center">
+                     <div class="col-3"><img src="/img/gallery/r12.jpg" alt="" width="100%" /></div>
+                        <div class="col-9">
+                         <h4>Семен Лет</h4>
+                        <p>Привет</p>
+                    </div>
+                </div>
+
+                <div class="row border mt-1 align-items-center">
+                    <div class="col-3"><img src="/img/gallery/r5.jpg" alt="" width="100%" /></div>
+                    <div class="col-9">
+                        <h4>Ирина Варнава</h4>
+                        <p>Скинула, смотри.</p>
+                    </div>
+                </div>
+                <div class="row border mt-1 align-items-center">
+                    <div class="col-3"><img src="/img/gallery/r9.jpg" alt="" width="100%" /></div>
+                    <div class="col-9">
+                        <h4>Валера Котц</h4>
+                        <p>Завтра не могу, давай в среду</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 offset-md-1">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-3"><img src="/img/gallery/r9.jpg" alt="" width="100%" /></div>
+                        <div class="col-9">
+                            <h4>Валера Котц</h4>
+                            <p>Отлично, подходит. Давай.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <img
+                                src="https://www.seekpng.com/png/full/356-3562377_personal-user.png"
+                                alt=""
+                                width="100%"
+                            />
+                        </div>
+                        <div class="col-9">
+                            <h4>Я</h4>
+                            <p>Давай. До завтра.</p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3 p-0">
+                        <div class="col-7">
+                            <textarea rows="2" class="form-control"></textarea>
+                        </div>
+                        <div class="col-5">
+                            <button class="btn btn-warning btn-block">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="row mt-5">
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Фамилия</th>
+            <th scope="col">Емейл</th>
+          </tr>
+        </thead>
+        <tbody id="userListTable"> 
+         
+       
+        </tbody>
+      </table>
+
+</div>
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Все Настройки</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" 
+    crossorigin="anonymous"></script>
+
+    <script>
+        let pathname = location.pathname.split("/")[2];
+        let navLink= document.querySelectorAll(".nav-link");
+        // let user;
+
+        async function getUser(){
+            let response=await fetch("/getUser");
+            return await response.json();
+        }
+
+        async function getUsers(){
+            let response=await fetch("/getUsers");
+            return await response.json();
+        }
+
+
+        addEventListener("popstate", (event)=>{
+        let path= location.pathname.split("/")[2];
+
+
+            if (pathname== "profile"){
+              
+
+        $('#profileTab').tab('show');
+        } else if  (pathname== "messages") {
+            $('#messagesTab').tab('show');
+        } else if (pathname== "settings") {
+            $('#settingsTab').tab('show');
+        }
+
+        });
+
+        
+    if (pathname== "profile"){
+       
+        
+        getUser().then((user)=>{
+        console.log(user);
+        userName.innerText=`${user.name} ${user.lastname}`;
+        userMail.innerText=`${user.email}`;
+        userId.innerText=`${user.id}`;
+        });
+
+        $('#v-pills-profile').tab('show');
+        } else if  (pathname== "messages") {
+            getUsers().then((user)=>{
+                console.log(page);
+                for(let i=0; 1<users.length; i++){
+                    userListTable.insertAdjacentHTML(
+                        "beforeend", `
+                <tr>
+					<th scope="row">${users[i].id}</th>
+					<td>${users[i].name}</td>
+					<td>${users[i].lastname}</td>
+					<td>${users[i].email}</td>
+				</tr>
+                        `
+               );
+
+            }
+            });
+            $('#v-pills-messages').tab('show');
+        } else if (pathname== "settings") {
+            $('#v-pills-settings').tab('show');
+        }  else {
+          location.href= location.protocol + "//" + location.host;
+       }
+    document.getElementById(pathname + "Tab").classList.add("active");
+let navLinks = document.querySelectorAll(".nav-link");
+for (let i = 0; i< navLinks.length; i++){
+    navLink[i].addEventListener("click", ()=>{
+        let page = navLinks[i].getAttribute("aria-controls").split("v-pills-")[1];
+        console.log(page);
+        history.pushState("", "", page);
+    });
+}
+    </script>
+    
+  </body>
+</html>
